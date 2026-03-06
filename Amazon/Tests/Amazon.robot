@@ -3,7 +3,7 @@ Documentation   This is some basic info about the whole suite
 Library         SeleniumLibrary
 
 *** Variables ***
-${BROWSER}          chrome
+#${BROWSER}          chrome
 
 
 *** Test Cases ***
@@ -16,7 +16,8 @@ User must sign in to check out
     Set Selenium Timeout    5s
 
     # Open browser in Sauce Labs
-    Open Browser            http://www.amazon.com    ${BROWSER}
+    #Open Browser            http://www.amazon.com    ${BROWSER}
+    Open Browser            http://www.amazon.com    
     # Resize browser window for recording
     Set Window Position     341  169
     Set Window Size         1024  700
