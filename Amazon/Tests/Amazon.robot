@@ -17,7 +17,7 @@ User must sign in to check out
     Set Selenium Timeout    5s
 
     # Open Browser parametrizable
-    Open Browser    https://www.amazon.com    ${BROWSER}    options=add_argument("--headless")
+    Open Browser    https://www.amazon.com    ${BROWSER}    
 
     # resize browser window for recording
     Set Window Position     x=341  y=169
