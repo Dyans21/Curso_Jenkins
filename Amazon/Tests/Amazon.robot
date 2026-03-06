@@ -17,13 +17,14 @@ User must sign in to check out
     Set selenium timeout    5s
 
     #Open Browser            http://www.amazon.com       chrome
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    "--headless=new"
-    Call Method    ${options}    add_argument    "--no-sandbox"
-    Call Method    ${options}    add_argument    "--disable-dev-shm-usage"
-    Call Method    ${options}    add_argument    "--window-size=1920,1080"
+    #${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    #Call Method    ${options}    add_argument    "--headless=new"
+    #Call Method    ${options}    add_argument    "--no-sandbox"
+    #Call Method    ${options}    add_argument    "--disable-dev-shm-usage"
+    #Call Method    ${options}    add_argument    "--window-size=1920,1080"
 
-    Open Browser    http://www.amazon.com    chrome    options=${options}
+    #Open Browser    http://www.amazon.com    chrome    options=${options}
+    Open Browser    http://www.amazon.com    chrome    options=add_argument(--headless);add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage)
 
     # resize browser window for recording
     Set window position     x=341  y=169
