@@ -5,7 +5,7 @@ Library         SeleniumLibrary
 # robot -d results Tests/Amazon.robot
 
 *** Variables ***
-${BROWSER}    chrome
+#${BROWSER}    chrome
 
 *** Test Cases ***
 User must sign in to check out
@@ -17,7 +17,8 @@ User must sign in to check out
     Set Selenium Timeout    5s
 
     # Open Browser parametrizable
-    Open Browser    https://www.amazon.com    ${BROWSER}    
+    #Open Browser    https://www.amazon.com    ${BROWSER}   
+     Open Browser    https://www.amazon.com    chrome  
 
     # resize browser window for recording
     Set Window Position     x=341  y=169
